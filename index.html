@@ -30,48 +30,22 @@
         margin: 0;
         font-family: "Open Sans", sans-serif;
       }
-
+      header{
+        background-color: white;
+      }
       .navbar {
-        margin-top: 0;
         width: 100vw;
         height: 74px;
         background-color: rgb(255, 255, 255);
       }
-      .navbar > h1{
-        margin: 0;
-      }
       .navbar > img{
-        float:right;
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 400px;
         height: 74px;
         margin-right: 40px;
       }
-
-      .navbar a {
-        color: inherit;
-        display: block;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-      }
-
-      .navbar a img {
-        height: 1.2rem;
-      }
-
-      .navbar a img.preview {
-        height: 2rem;
-        border: 1px solid #f5c012;
-      }
-
-      .navbar .container {
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        gap: 0.2rem;
-      }
-
       .container {
         width: 90%;
         max-width: 700px;
@@ -193,29 +167,29 @@
     </script>
     <script src="js/clipboardtext.js"></script>
   </head>
-  <body>
+  <header>
     <div class="navbar">
       <img src="img/LogoCrede08.png" alt="LogoCrede08">
     </div>
-
+  </header>
+  <body>
     <div class="container">
       <input type="text" />
-
       <button class="save">Salvar Imagem</button>
       <button class="share">
         Compartilhar Imagem
         <img src="img/share.svg" />
       </button>
 
-      <canvas width="1080" height="1080"></canvas>
+      <canvas width="1280" height="1280"></canvas>
 <hr>
       <footer>
         <p>Desenvolvido pela equipe CREDE 8:</p>
         <p><a href=""><img src="img/instagram-logo.svg" alt=""></a>Wagner Dantas - Supervisor/Suporte Técnico CREDE 8 </p>
-        <p><a href=""><img src="img/instagram-logo.svg" alt=""></a>Anne Camilly - Estágiaria da EEEP Clemente Olintho Távora Arruda</p>
-        <p><a href=""><img src="img/instagram-logo.svg" alt=""></a>Gabriella Castro - Estágiaria da EEEP Clemente Olintho Távora Arruda</p>
-        <p><a href=""><img src="img/instagram-logo.svg" alt=""></a>Kaio Davidson - Estágiario da EEEP Clemente Olintho Távora Arruda</p>
-        <p><a href=""><img src="img/instagram-logo.svg" alt=""></a>Pedro Lucas - Estágiario da EEEP Clemente Olintho Távora Arruda</p>
+        <p><a href=""><img src="img/instagram-logo.svg" alt=""></a>Anne Camilly - Estagiária da EEEP Clemente Olintho Távora Arruda</p>
+        <p><a href=""><img src="img/instagram-logo.svg" alt=""></a>Gabriella Castro - Estagiária da EEEP Clemente Olintho Távora Arruda</p>
+        <p><a href=""><img src="img/instagram-logo.svg" alt=""></a>Kaio Davidson - Estagiário da EEEP Clemente Olintho Távora Arruda</p>
+        <p><a href=""><img src="img/instagram-logo.svg" alt=""></a>Pedro Lucas - Estagiário da EEEP Clemente Olintho Távora Arruda</p>
       </footer>
 
       <smartphone>
@@ -228,7 +202,7 @@
       const context = canvas.getContext("2d");
 
       const baseImage = new Image();
-      baseImage.src = "./base.png";
+      baseImage.src = "img/FlyerCREDE8.jpg";
 
       const names = [
         "Jose",
@@ -469,23 +443,22 @@
 
           context.save();
 
-          context.translate(540, 348);
-          context.rotate((-2 * Math.PI) / 180);
+          context.translate(640, 268);
 
           context.textBaseline = "middle";
-          context.font = "196.13px Bebas Neue";
+          context.font = "136.13px Bebas Neue";
           const width = context.measureText(
             document.querySelector("input").value.trim()
           ).width;
 
-          context.fillStyle = "#1ABC4C";
+          context.fillStyle = "#70BA6D";
           roundRect(
             context,
             -width / 2 - 25,
-            -184 / 2,
+            -134 / 2,
             width + 25 * 2,
-            184,
-            21.66
+            134,
+            10.66
           );
 
           context.fillStyle = "white";
